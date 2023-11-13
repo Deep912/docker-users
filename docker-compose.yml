@@ -2,6 +2,7 @@ version: '3'
 
 services:
   php:
+    container_name: script
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,6 +10,7 @@ services:
       - "8080:80"
     
   sql:
+    container_name: sql
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: root

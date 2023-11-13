@@ -8,7 +8,7 @@ $docker = $_POST['docker'];
 $sql = "INSERT INTO users ( username, password, docker ) VALUES ('$username', '$password' , '$docker)";
 
 if ($conn->query($sql) === TRUE) {
-    echo "User registered successfully";
+    header("Location: result.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
