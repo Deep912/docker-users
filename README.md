@@ -29,10 +29,11 @@ Before you begin, make sure you have the following installed:
 2. **change directory to docker_land:**
    ```bash
    cd docker_land
+   ```
 
+3. **run containers:**
+   ```bash
+   docker-compose up
+   ```
 
-3.run containers
-```bash
-docker-compose up
-```
-
+there you go!!
