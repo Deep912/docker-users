@@ -5,7 +5,7 @@ $name = $_POST['name'];
 $password = $_POST['password'];
 $docker = $_POST['docker'];
 
-$sql = "INSERT INTO users ( username, password, docker ) VALUES ('$username', '$password' , '$docker)";
+$sql = "INSERT INTO users ( username, password, docker ) VALUES ('$name', '$password' , '$docker')";
 
 if ($conn->query($sql) === TRUE) {
     header("Location: result.php");

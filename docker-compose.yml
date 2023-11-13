@@ -8,12 +8,23 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:80"
+    networks:
+      - inter
     
-  sql:
-    container_name: sql
+  mysql:
+    container_name: mysql
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: phplogin
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
+    networks:
+      - inter
+
+
+networks:
+  inter:
+    driver: overlay
