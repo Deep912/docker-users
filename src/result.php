@@ -52,8 +52,9 @@ $result = mysqli_query($conn, $sql);
     }
   </style>
 </head>
+<h1>User Data Table</h1>
 <body>
-  <h1>User Data Table</h1>
+  
 
   <table>
     <thead>
@@ -74,14 +75,18 @@ while ($row = mysqli_fetch_assoc($result)) {
       </tr>
     
     
-      </tbody>
-  </table>
-
-</body>
-</html>
+     
 
     <?php
 }
+
+?> 
+</tbody>
+</table>
+
+</body>
+</html>
+<?php
 echo "</table>";
 
 mysqli_close($conn);
