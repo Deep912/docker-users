@@ -1,7 +1,7 @@
 <?php 
 include 'con.php';
 
-$name = $_POST['name'];
+$name = $_POST['username'];
 $password = $_POST['password'];
 $docker = $_POST['docker'];
 
