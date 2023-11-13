@@ -13,3 +13,5 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: phplogin
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
